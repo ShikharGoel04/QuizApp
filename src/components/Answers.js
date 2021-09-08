@@ -11,25 +11,8 @@ export default function Answers(props)
     let questions=props.location.state.questions
     let marks=0;
     questions.map((item,index) => {
-        
-        switch(correct[index])
-        {
-            case "answer_a":
-                correctAnswers.push(item.answers.answer_a)
-                break;
-            case "answer_b":
-                correctAnswers.push(item.answers.answer_b)
-                break;
-            case "answer_c":
-                correctAnswers.push(item.answers.answer_c)
-                break;
-            case "answer_d":
-                correctAnswers.push(item.answers.answer_d)
-                break;
-            default:
-                correctAnswers.push(item.answers.answer_a)
-        }
-    
+        correct[index]?correctAnswers.push(item.answers[correct[index]]):correctAnswers.push(item.answers.answer_a)
+       
 })
     answers.map((item,index) => {
         return (
