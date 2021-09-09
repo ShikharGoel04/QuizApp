@@ -21,7 +21,7 @@ useEffect(() => {
     .then((response) => response.json())
     .then((res) => setQuestions(res)  )
 },[])
-let quizQuestions=questions.slice(0,10);
+let quizQuestions=questions.slice(0,11);
 let correct= [];
 quizQuestions.map((item) => {correct.push(item.correct_answer)} )
 console.log("correctAnswers",correct)

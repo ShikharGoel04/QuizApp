@@ -11,6 +11,7 @@ export default function Answers(props)
     let questions=props.location.state.questions
     let marks=0;
     questions.map((item,index) => {
+        if(index<=9)
         correct[index]?correctAnswers.push(item.answers[correct[index]]):correctAnswers.push(item.answers.answer_a)
        
 })
@@ -20,12 +21,11 @@ export default function Answers(props)
                 item===correctAnswers[index]?(marks=marks+10):'')
     })
     return (<>
-    <h1>Answers</h1>
-    {}
-     {}
-  <Container>
-       <div className="d-flex flex-nowrap">
-       <div className="p-2">
+    <h1 className="heading">Answers</h1>
+   
+ 
+       <div className="result">
+       <div className="answers">
           
            <h3>Marks Obtained : {marks}</h3>
            <h2>Your Answers</h2>
@@ -39,7 +39,8 @@ export default function Answers(props)
              )
            })}
            </div>
-           <div className="p-2">
+           <div className="answers">
+               <br/><br/>
            <h2>Correct Answers</h2>
            
             {correctAnswers.map((item) => {
@@ -47,7 +48,7 @@ export default function Answers(props)
             }) }
             </div>
             </div>
-       </Container>
+     
             {console.log(marks)}
     {console.log("correctAnswers",correctAnswers)}
     </>

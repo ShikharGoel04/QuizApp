@@ -42,15 +42,14 @@ console.log("questions",questions)
 // let correctt=Object.values(questions[index].correct_answers).filter((item) => {return (item===true)})
 //                     console.log("correcttt",correctt)
 return (
-    <><h1>Quiz Begins</h1>
+    <>
     <p> Timer {count} </p>
    <p>Q {index+1} {questions[index].question}</p>
    {Object.values(questions[index].answers).map((item,ind) => {
      return ( item? <><p> <label key={index}><input type="radio" name={questions[index].question} key={ind} value={item}   onChange={(e) => selectAnswer(e)}/>{item}</label></p> </>:'')
     })}
-   {index===9? <Redirect to ={{pathname:"/answers",state:{questions:questions,answers:answers,correct:correct}}}/> : ''}
-   
-    </>
+   {index===10? <Redirect to ={{pathname:"/answers",state:{questions:questions,answers:answers,correct:correct}}}/> : ''}
+ 
+  </>
 )
-
 }

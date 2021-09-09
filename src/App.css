@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.heading
+{
+  margin-left:400px;
+}
+.result{
+  display:flex;
+  flex-direction: row;
+  margin-left:200px;
+}
+
+.answers{
+  padding-right:20px;
+}
+
+
