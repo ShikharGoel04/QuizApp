@@ -21,7 +21,7 @@ export default function Answers(props)
                 item===correctAnswers[index]?(marks=marks+10):'')
     })
     return (<>
-    <h1 className="heading">Answers</h1>
+    <h1 className="heading">Result</h1>
    
  
        <div className="result">

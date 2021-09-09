@@ -44,9 +44,12 @@
   display:flex;
   flex-direction: row;
   margin-left:200px;
+  border:1px solid black;
+  width:50%;
 }
 
 .answers{
+  padding-left: 70px;
   padding-right:20px;
 }
 

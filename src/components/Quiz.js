@@ -28,19 +28,22 @@ useEffect(() => {
 
     return () => clearInterval(timer)
 },[count])
-
+//  useEffect(() => 
+//  {
+//      console.log("answer updated")
+//     setIndex(i => i+1)
+//  },[answers])
 
 const selectAnswer = (e) => {
-setAnswers(a => [...a, e.target.value])
+
+setAnswers(a => [...a, e.target.value])  
 setIndex(i => i+1)
 setCount(15)
 
 
 }
 console.log("questions",questions)
-// Object.values(questions[index].correct_answers).map((item) => console.log("correcct",item))
-// let correctt=Object.values(questions[index].correct_answers).filter((item) => {return (item===true)})
-//                     console.log("correcttt",correctt)
+
 return (
     <div className="heading">
     <p> Timer {count} </p>
